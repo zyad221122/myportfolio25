@@ -17,6 +17,11 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -102,7 +107,7 @@
 
         </div>
     </section>
-<!--
+
     <section id="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
@@ -131,7 +136,6 @@
             </div>
         </div>
     </section>
-    -->
 
     <section id="contact" style="background: #f8f9fa;">
         <div class="container">
@@ -152,6 +156,22 @@
             <p>&copy; 2024 Portfolio. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
 
